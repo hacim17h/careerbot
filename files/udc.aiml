@@ -21,10 +21,21 @@
           <br/>
           <b>What are your favorite courses from your college journey?</b>
       </template>
-      
   </category>
   <category>
       <pattern>HI ^</pattern>
       <template><srai>HELLO *</srai></template>
+  </category>
+  <category>
+      <pattern># <set>positivebeforenoun</set> ^ MATH ^</pattern>
+      <template>I'm glad you <star index="2"/> math! It's fantastic!</template>
+  </category>
+  <category>
+      <pattern># MATH ^ <set>positiveafternoun</set> ^</pattern>
+      <template>I'm glad you think math <person><star index="2"/></person> <star index="3"/>! It is really great!</template>
+  </category>
+  <category>
+      <pattern>^ I * ^ MATH ^</pattern>
+      <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
   </category>
 </aiml>
