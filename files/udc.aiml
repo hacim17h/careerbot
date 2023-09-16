@@ -12,7 +12,8 @@
   <category>
       <pattern>HELLO ^</pattern>
       <template>
-          Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you.
+          Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you!
+          <br/>
           I'm going to ask you a few questions to see what job would suit your background 
           and preferences. 
           <br/>
@@ -28,13 +29,31 @@
           <template>
             Those are great courses! <star index="2"/> in particular can be really useful for a number of jobs.
             <br/>
-            <b>What classes do you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
+            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
           </template>
       </category>
       <category>
           <pattern>*</pattern>
           <template>
               Wow I haven't heard of that before! Sounds like you've had an exciting Computer Science career!
+              <br/>
+              <b>What classes do you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
+          </template>
+      </category>
+  </topic>
+    <topic name="least favorite">
+      <category>
+          <pattern>^ <set>classes</set> ^</pattern>
+          <template>
+            I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+            <br/>
+            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
+          </template>
+      </category>
+      <category>
+          <pattern>*</pattern>
+          <template>
+              Even though those classes don't ring a bell for me, they still sound a hassel to deal with!
               <br/>
               <b>What classes do you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
           </template>
