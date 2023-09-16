@@ -4,4 +4,22 @@
     <pattern>*</pattern>
     <template>I have no answer for that.</template>
   </category>
+  <category>
+      <pattern>HELLO ^</pattern>
+      <template>
+          Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you.
+          I'm going to ask you a few questions to see what job would suit your background 
+          and preferences. 
+          <br/>
+          Please answer the questions the best you can so I can give you the most awesome information! 
+          With all that said, let's get started!
+          <br/>
+          <b>What are your favorite courses from your college journey?</b>
+      </template>
+      
+  </category>
+  <category>
+      <pattern>HI ^</pattern>
+      <template><srai>HELLO *</srai></template>
+  </category>
 </aiml>
