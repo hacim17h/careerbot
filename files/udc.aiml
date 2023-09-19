@@ -75,4 +75,20 @@
       <pattern>^ I * ^ MATH ^</pattern>
       <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
   </category>
+  <category>
+      <pattern>^ <set>classes</set> ^</pattern>
+      <template>
+          <think><set name="count">0</set></think>
+          <condition name="count">
+              <li><value><bot name="numcategories"/></value></li>
+              <li>
+                  hello
+                  <think><set name="count">
+                      <map name="successor"><get name="count"/></map>
+                  </set></think>
+                  <loop/>
+              </li>
+          </condition>
+      </template>
+  </category>
 </aiml>
