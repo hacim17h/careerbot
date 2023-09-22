@@ -1,126 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>
-        I'm not sure how to respond to that. My name is Careerbot and I can to help you find what computer 
-        science job is right for you. 
-        <br/>
-        <b>Please say "hello" to me and we can get started looking for your new career!</b>
-    </template>
-  </category>
-  <category>
-      <pattern>HELLO ^</pattern>
-      <template>
-          Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you!
-          <br/>
-          I'm going to ask you a few questions to see what job would suit your background 
-          and preferences. 
-          <br/>
-          Please answer the questions the best you can so I can give you the most awesome information! 
-          With all that said, let's get started!
-          <br/>
-          <b>What are your <set name="topic">favorite courses</set> from your college journey?</b>
-      </template>
-  </category>
-  <topic name="favorite courses">
-      <category>
-          <pattern>^ <set>classes</set> ^</pattern>
-          <template>
-            Those are great courses! <star index="2"/> in particular can be really useful for a number of jobs.
+    <category>
+        <pattern>*</pattern>
+        <template>
+            I'm not sure how to respond to that. My name is Careerbot and I can to help you find what computer 
+            science job is right for you. 
             <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-          </template>
-      </category>
-      <category>
-          <pattern>*</pattern>
-          <template>
-              Wow I haven't heard of that before! Sounds like you've had an exciting Computer Science career!
-              <br/>
-              <b>What classes do you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-          </template>
-      </category>
-  </topic>
+            <b>Please say "hello" to me and we can get started looking for your new career!</b>
+        </template>
+    </category>
+    <category>
+        <pattern>HELLO ^</pattern>
+        <template>
+            Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you!
+            <br/>
+            I'm going to ask you a few questions to see what job would suit your background 
+            and preferences. 
+            <br/>
+            Please answer the questions the best you can so I can give you the most awesome information! 
+            With all that said, let's get started!
+            <br/>
+            <b>What is your <set name="topic">favorite course</set> from your college journey?</b>
+        </template>
+    </category>
+    <topic name="favorite course">
+        <category>
+            <pattern>^ <set>mathclasses</set> ^</pattern>
+            <template>
+                I see you like math! <star index="2"/> in particular can be really useful for a number of jobs.
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>networkclasses</set> ^</pattern>
+            <template>
+                I see you like networking! <star index="2"/> in particular can be really useful for a number of jobs.
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>infosecclasses</set> ^</pattern>
+            <template>
+                I see you like security! <star index="2"/> in particular can be really useful for a number of jobs.
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>interactiveclasses</set> ^</pattern>
+            <template>
+                I see you like something more interactive and with variety! <star index="2"/> in particular can be really useful for a number of jobs.
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>programmingclasses</set> ^</pattern>
+            <template>
+                I see you like programming! <star index="2"/> in particular can be really useful for a number of jobs.
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Wow I haven't heard of that before! Sounds like you've had an exciting Computer Science career!
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+    </topic>
     <topic name="least favorite">
-      <category>
-          <pattern>^ <set>classes</set> ^</pattern>
-          <template>
-            I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-          </template>
-      </category>
-      <category>
-          <pattern>*</pattern>
-          <template>
-              Even though those classes don't ring a bell for me, they still sound a hassel to deal with!
-              <br/>
-              <b>What classes do you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-          </template>
-      </category>
-  </topic>
-  <category>
-      <pattern>HI ^</pattern>
-      <template><srai>HELLO *</srai></template>
-  </category>
-  <category>
-      <pattern># <set>positivebeforenoun</set> ^ MATH ^</pattern>
-      <template>I'm glad you <star index="2"/> math! It's fantastic!</template>
-  </category>
-  <category>
-      <pattern># MATH ^ <set>positiveafternoun</set> ^</pattern>
-      <template>I'm glad you think math <person><star index="2"/></person> <star index="3"/>! It is really great!</template>
-  </category>
-  <category>
-      <pattern>^ I * ^ MATH ^</pattern>
-      <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
-  </category>
-   <category>
-        <pattern>^ <set>mathrelated</set> ^</pattern>
-        <template>
-            I see you like math! <star index="2"/> in particular can be really useful for a number of jobs.
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-        </template>
+        <category>
+            <pattern>^ <set>mathclasses</set> ^</pattern>
+            <template>
+                I can understand that! Math classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                <br/>
+                <b>Now that I got what your favorites are, what are some <set name="topic">hobbies</set> you have?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>networkclasses</set> ^</pattern>
+            <template>
+                I can understand that! Network classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                <br/>
+                <b>Now that I got what your favorites are, what are some <set name="topic">hobbies</set> you have?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>infosecclasses</set> ^</pattern>
+            <template>
+                I can understand that! Security classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                <br/>
+                <b>Now that I got what your favorites are, what are some <set name="topic">hobbies</set> you have?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>interactiveclasses</set> ^</pattern>
+            <template>
+                I can understand that! Some broad classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                <br/>
+                <b>Now that I got what your favorites are, what are some <set name="topic">hobbies</set> you have?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>programmingclasses</set> ^</pattern>
+            <template>
+                I can understand that! Programming classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                <br/>
+                <b>Now that I got what your favorites are, what are some <set name="topic">hobbies</set> you have?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Even though that class don't ring a bell for me, It still sounds like a hassel to deal with!
+                <br/>
+                <b>Now that I got what your favorites are, what are some <set name="topic">hobbies</set> you have?</b>
+            </template>
+        </category>
+    </topic>
+    <topic name="hobbies">
+    </topic>
+    <category>
+        <pattern>HI ^</pattern>
+        <template><srai>HELLO *</srai></template>
     </category>
     <category>
-        <pattern>^ <set>networkrelated</set> ^</pattern>
-        <template>
-            I see you like networking! <star index="2"/> in particular can be really useful for a number of jobs.
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-        </template>
+        <pattern># <set>positivebeforenoun</set> ^ MATH ^</pattern>
+        <template>I'm glad you <star index="2"/> math! It's fantastic!</template>
     </category>
     <category>
-        <pattern>^ <set>coderelated</set> ^</pattern>
-        <template>
-            I see you like coding! <star index="2"/> in particular can be really useful for a number of jobs.
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-        </template>
+        <pattern># MATH ^ <set>positiveafternoun</set> ^</pattern>
+        <template>I'm glad you think math <person><star index="2"/></person> <star index="3"/>! It is really great!</template>
     </category>
     <category>
-        <pattern>^ <set>infosecrelated</set> ^</pattern>
-        <template>
-            I see you like security! <star index="2"/> in particular can be really useful for a number of jobs.
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-        </template>
-    </category>
-    <category>
-        <pattern>^ <set>interactiverelated</set> ^</pattern>
-        <template>
-            I see you like something more interative and variety! <star index="2"/> in particular can be really useful for a number of jobs.
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-        </template>
-    </category>
-    <category>
-        <pattern>^ <set>programmingrelated</set> ^</pattern>
-        <template>
-            I see you like programming! <star index="2"/> in particular can be really useful for a number of jobs.
-            <br/>
-            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
-        </template>
+        <pattern>^ I * ^ MATH ^</pattern>
+        <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
     </category>
 </aiml>
