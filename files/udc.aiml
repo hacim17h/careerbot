@@ -115,6 +115,12 @@
             <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
         </template>
     </category>
-  
-  
+    <category>
+        <pattern>^ <set>programmingrelated</set> ^</pattern>
+        <template>
+            I see you like programming! <star index="2"/> in particular can be really useful for a number of jobs.
+            <br/>
+            <b>What classes did you find to be your <set name="topic">least favorite</set> while you were taking them?</b>
+        </template>
+    </category>
 </aiml>
