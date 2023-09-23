@@ -200,11 +200,11 @@
             <think>
                 <set name="mathpoints">3</set>
                 <set name="codepoints">4</set>
-                <set name="interactpoints">0</set>
+                <set name="interactpoints">4</set>
                 <set name="secpoints">3</set>
-                <set name="netpoints">2</set>
+                <set name="netpoints">4</set>
                 <set name="start">1</set>
-                <set name="numcategories">5</set>
+                <set name="numcategories">6</set>
                 <set name="highscore"><get name="mathpoints"/></set>
                 <set name="leadingcareer">1</set>
                 <set name="scoreset">no</set>
@@ -226,18 +226,196 @@
                 <li><value><get name="numcategories"/></value></li>
                 <li>
                     <condition><var><get name="start"/></var>
-                    <li value="4">
-                        <condition name="scoreset">
-                            <li value="yes"></li>
-                            <li value="no">
-                                <think>
-                                    <set name="scoreset">yes</set>
-                                    <set name="highscore"><get><var><get name="start"/></var></get></set>
-                                    <set name="leadingcareer"><get name="start"/></set>
-                                </think>
-                            </li>
-                        </condition>
-                    </li>
+                        <li value="4">
+                            <condition name="scoreset">
+                                <li value="yes">
+                                    <condition name="highscore">
+                                        <li value="4">
+                                            <random>
+                                                <li>
+                                                    <think>
+                                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                        <set name="leadingcareer"><get name="start"/></set>
+                                                    </think>
+                                                </li>
+                                                <li></li>
+                                            </random>
+                                        </li>
+                                        <li value="3">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                        <li value="2">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                        <li value="1">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                        <li value="0">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li value="no">
+                                    <think>
+                                        <set name="scoreset">yes</set>
+                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                        <set name="leadingcareer"><get name="start"/></set>
+                                    </think>
+                                </li>
+                            </condition>
+                        </li>
+                        <li value="3">
+                            <condition name="scoreset">
+                                <li value="yes">
+                                    <condition name="highscore">
+                                         <li value="3">
+                                            <random>
+                                                <li>
+                                                    <think>
+                                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                        <set name="leadingcareer"><get name="start"/></set>
+                                                    </think>
+                                                </li>
+                                                <li></li>
+                                            </random>
+                                        </li>
+                                        <li value="2">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                        <li value="1">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                        <li value="0">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li value="no">
+                                    <think>
+                                        <set name="scoreset">yes</set>
+                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                        <set name="leadingcareer"><get name="start"/></set>
+                                    </think>
+                                </li>
+                            </condition>
+                        </li>
+                        <li value="2">
+                            <condition name="scoreset">
+                                <li value="yes">
+                                    <condition name="highscore">
+                                         <li value="2">
+                                            <random>
+                                                <li>
+                                                    <think>
+                                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                        <set name="leadingcareer"><get name="start"/></set>
+                                                    </think>
+                                                </li>
+                                                <li></li>
+                                            </random>
+                                        </li>
+                                        <li value="1">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                        <li value="0">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li value="no">
+                                    <think>
+                                        <set name="scoreset">yes</set>
+                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                        <set name="leadingcareer"><get name="start"/></set>
+                                    </think>
+                                </li>
+                            </condition>
+                        </li>
+                        <li value="1">
+                            <condition name="scoreset">
+                                <li value="yes">
+                                    <condition name="highscore">
+                                         <li value="1">
+                                            <random>
+                                                <li>
+                                                    <think>
+                                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                        <set name="leadingcareer"><get name="start"/></set>
+                                                    </think>
+                                                </li>
+                                                <li></li>
+                                            </random>
+                                        </li>
+                                        <li value="0">
+                                            <think>
+                                                <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                <set name="leadingcareer"><get name="start"/></set>    
+                                            </think>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li value="no">
+                                    <think>
+                                        <set name="scoreset">yes</set>
+                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                        <set name="leadingcareer"><get name="start"/></set>
+                                    </think>
+                                </li>
+                            </condition>
+                        </li>
+                        <li value="0">
+                            <condition name="scoreset">
+                                <li value="yes">
+                                    <condition name="highscore">
+                                         <li value="0">
+                                            <random>
+                                                <li>
+                                                    <think>
+                                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                                        <set name="leadingcareer"><get name="start"/></set>
+                                                    </think>
+                                                </li>
+                                                <li></li>
+                                            </random>
+                                        </li>
+                                    </condition>
+                                </li>
+                                <li value="no">
+                                    <think>
+                                        <set name="scoreset">yes</set>
+                                        <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                        <set name="leadingcareer"><get name="start"/></set>
+                                    </think>
+                                </li>
+                            </condition>
+                        </li>
                     </condition>
                     <br/>
                     <get><var><get name="start"/></var></get> is the value of varible <get name="start"/>
