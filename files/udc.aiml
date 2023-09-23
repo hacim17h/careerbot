@@ -194,4 +194,61 @@
         <pattern>^ I * ^ MATH ^</pattern>
         <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
     </category>
+    <category>
+        <pattern>CBPOINTTOTALS</pattern>
+        <template>
+            <think>
+                <set name="mathpoints">3</set>
+                <set name="codepoints">4</set>
+                <set name="interactpoints">0</set>
+                <set name="secpoints">3</set>
+                <set name="netpoints">2</set>
+                <set name="start">1</set>
+                <set name="numcategories">5</set>
+                <set name="highscore"><get name="mathpoints"/></set>
+                <set name="leadingcareer">1</set>
+                <set name="scoreset">no</set>
+            </think>
+            <srai>CBRESULTS</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CBRESULTS</pattern>
+        <template>
+            <think>
+                <set var="1"><get name="mathpoints"/></set>
+                <set var="2"><get name="codepoints"/></set>
+                <set var="3"><get name="interactpoints"/></set>    
+                <set var="4"><get name="secpoints"/></set>
+                <set var="5"><get name="netpoints"/></set>
+            </think>
+            <condition name="start">
+                <li><value><get name="numcategories"/></value></li>
+                <li>
+                    <condition><var><get name="start"/></var>
+                    <li value="4">
+                        <condition name="scoreset">
+                            <li value="yes"></li>
+                            <li value="no">
+                                <think>
+                                    <set name="scoreset">yes</set>
+                                    <set name="highscore"><get><var><get name="start"/></var></get></set>
+                                    <set name="leadingcareer"><get name="start"/></set>
+                                </think>
+                            </li>
+                        </condition>
+                    </li>
+                    </condition>
+                    <br/>
+                    <get><var><get name="start"/></var></get> is the value of varible <get name="start"/>
+                    <think><set name="start"><map name="successor"><get name="start"/></map></set></think>
+                    <br/>
+                    the value of start is now <get name="start"/>
+                    <loop/>
+                </li>
+            </condition>
+            
+            
+        </template>
+    </category>
 </aiml>
