@@ -10,7 +10,7 @@
         </template>
     </category>
     <category>
-        <pattern>HELLO ^</pattern>
+        <pattern>^ HELLO ^</pattern>
         <template>
             <think><set name="mathpoints">0</set></think>
             <think><set name="codepoints">0</set></think>
@@ -31,12 +31,12 @@
         </template>
     </category>
     <category>
-        <pattern>HI ^</pattern>
-        <template><srai>HELLO *</srai></template>
+        <pattern>^ HI ^</pattern>
+        <template><srai>^ HELLO ^</srai></template>
     </category>
     <topic name="favorite course">
         <category>
-            <pattern>HELLO ^</pattern>
+            <pattern>^ HELLO ^</pattern>
             <template>
                 I'm glad you're excited to greet me again! However, I still need an answer please.
                 <br/>
@@ -44,7 +44,7 @@
             </template>
         </category>
         <category>
-            <pattern>HI ^</pattern>
+            <pattern>^ HI ^</pattern>
             <template><srai>HELLO *</srai></template>
         </category>
         <category>
@@ -135,7 +135,7 @@
     </topic>
     <topic name="least favorite">
         <category>
-            <pattern>HELLO ^</pattern>
+            <pattern>^ HELLO ^</pattern>
             <template>
                 I'm glad you're excited to greet me again! However, I still need an answer please.
                 <br/>
@@ -143,7 +143,7 @@
             </template>
         </category>
         <category>
-            <pattern>HI ^</pattern>
+            <pattern>^ HI ^</pattern>
             <template><srai>HELLO *</srai></template>
         </category>
         <category>
@@ -341,7 +341,7 @@
     </topic>
     <topic name="math">
         <category>
-            <pattern>HELLO ^</pattern>
+            <pattern>^ HELLO ^</pattern>
             <template>
                 I'm glad you're excited to greet me again! However, I still need an answer please.
                 <br/>
@@ -349,7 +349,7 @@
             </template>
         </category>
         <category>
-            <pattern>HI ^</pattern>
+            <pattern>^ HI ^</pattern>
             <template><srai>HELLO *</srai></template>
         </category>
         <category>
@@ -388,7 +388,7 @@
     </topic>
     <topic name="job">
         <category>
-            <pattern>HELLO ^</pattern>
+            <pattern>^ HELLO ^</pattern>
             <template>
                 I'm glad you're excited to greet me again! However, I still need an answer please.
                 <br/>
@@ -396,7 +396,7 @@
             </template>
         </category>
         <category>
-            <pattern>HI ^</pattern>
+            <pattern>^ HI ^</pattern>
             <template><srai>HELLO *</srai></template>
         </category>
         <category>
