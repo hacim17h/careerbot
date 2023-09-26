@@ -290,7 +290,7 @@
         <category>
             <pattern>*</pattern>
             <template>
-                Even though that class don't ring a bell for me, It still sounds like a hassel to deal with!
+                Even though that class doesn't ring a bell for me, It still sounds like a hassel to deal with!
                 <br/>
                 <condition name="likesmath">
                     <li value="yes">
@@ -313,16 +313,12 @@
     </topic>
     <topic name="math">
         <category>
-            <pattern># <set>positivebeforenoun</set> ^ <set>mathrelated</set> ^</pattern>
-            <template>I'm glad you <star index="2"/> math! It's fantastic!</template>
+            <pattern>^ <set>negativeresponses</set> ^</pattern>
+            <template>I can understand why you don't like math. It isn't for everyone and it can be cumbersome!</template>
         </category>
         <category>
-            <pattern># <set>mathrelated</set> ^ <set>positiveafternoun</set> ^</pattern>
-            <template>I'm glad you think math <person><star index="2"/></person> <star index="3"/>! It is really great!</template>
-        </category>
-        <category>
-            <pattern>^ I * ^ <set>mathrelated</set> ^</pattern>
-            <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
+            <pattern>^ <set>positiveresponses</set> ^</pattern>
+            <template>I'm glad you enjoy math! It's fantastic!</template>
         </category>
     </topic>
     <topic name="hobbies">
