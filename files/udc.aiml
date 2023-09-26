@@ -359,6 +359,7 @@
                 I understand. Having an easier job being a priority can allow for a more relaxed lifestyle. 
                 <br/>
                 I think I have enough information now! Let's go over what I think would be a good career choice for you.
+                <srai>CBPOINTTOTALS</srai>
             </template>
         </category>
         <category>
@@ -369,6 +370,7 @@
                 I understand. Being compensated well means a lot especially if you have dependents, a large family, or just want a more robust lifestyle. 
                 <br/>
                 I think I have enough information now! Let's go over what I think would be a good career choice for you.
+                <srai>CBPOINTTOTALS</srai>
             </template>
         </category>
         <category>
@@ -380,6 +382,7 @@
                 I understand. With the job market moving at a rapid pace, it is important to join careers that have the highest prospects for the future. 
                 <br/>
                 I think I have enough information now! Let's go over what I think would be a good career choice for you.
+                <srai>CBPOINTTOTALS</srai>
             </template>
         </category>
         <category>
@@ -391,6 +394,7 @@
                 I understand. Having the ability to work from home can be a really empowering experience. It can allow flexibility and save money on travel. 
                 <br/>
                 I think I have enough information now! Let's go over what I think would be a good career choice for you.
+                <srai>CBPOINTTOTALS</srai>
             </template>
         </category>
         <category>
@@ -401,6 +405,7 @@
                 That sounds interesting! I'm not familiar with all of those aspects but from what I can gather I think I know what you mean.
                 <br/>
                 Okay! I have enough information now! Let's go over what I think would be a good career choice for you.
+                <srai>CBPOINTTOTALS</srai>
             </template>
         </category>
     </topic>
@@ -433,7 +438,9 @@
                 <set var="5"><get name="netpoints"/></set>
             </think>
             <condition name="start">
-                <li><value><get name="numcategories"/></value></li>
+                <li><value><get name="numcategories"/></value>
+                    <srai>CBCAREERSELECTION</srai>
+                </li>
                 <li>
                     <condition><var><get name="start"/></var>
                         <li value="4">
@@ -627,16 +634,70 @@
                             </condition>
                         </li>
                     </condition>
-                    <br/>
-                    <get><var><get name="start"/></var></get> is the value of varible <get name="start"/>
                     <think><set name="start"><map name="successor"><get name="start"/></map></set></think>
-                    <br/>
-                    the value of start is now <get name="start"/>
                     <loop/>
                 </li>
             </condition>
-            
-            
+        </template>
+    </category>
+    <category>
+        <pattern>CBCAREERSELECTION</pattern>
+        <template>
+            <br/>
+            <br/>
+            <condition name="leadingcareer">
+                <li value="1">
+                    <b>I think you should be an AI Engineer!</b>
+                    <br/> 
+                    Artificial intelligence can be challenging. It deals with a lot of math and at times uses complex algorithms. However,
+                    it is a very rewarding field with high compensation. It also has the benefits of being future proof due to the huge boom of 
+                    machine learning. Being a part of a rapidly changing industry can be exciting and you have the potential to be at the forefront of a 
+                    new and luractive adventure. 
+                    <br/>
+                    From what you've told me. I think this job would pair well with your preferences!
+                </li>
+                <li value="2">
+                    <b>I think you should be a Software Developer!</b>
+                    <br/> 
+                    Software development is something common to a lot of Computer Science graduates. It requires a bit of math, but there are several 
+                    roles that don't need as much paving way for people who have a lot of programming experience and know a lot of languages but might lack some math skills. The compensation 
+                    is still generous and while it might not be as future proof as fields that do use machine learning, it is still very stable. Working remotely
+                    is simple for this kind of job and there are several positions for work from home employees in software development.
+                    <br/>
+                    So, from what you've told me, I think this job would pair well with your preferences!
+                </li>
+                <li value="3">
+                    <b>I think you should be a Game Developer!</b>
+                    <br/> 
+                    Game development is a rewarding career that covers a lot of disciplines. If you have a broader set of skills, there is a huge variety of 
+                    interactive media that you can create. While the pay might be lower initially than some of the other more technical careers, over time compensation
+                    will become more competitive as you gain experience. The freedom of being able to potentially work with music, user interfaces, and possibly have cool
+                    social interactions with end users make this career fulfilling. However, some of these companies prefer in office work due to IP concerns so be mindful of this.
+                    <br/>
+                    From what you've told me, however, I think this job would pair well with your preferences!
+                </li>
+                <li value="4">
+                    <b>I think you should be an Information Security Analyst!</b>
+                    <br/> 
+                    An Information Security Analyst is a very sensitive but rewarding career. You deal with data hiding, cryptology, and the ethics that govern the information you're protecting.
+                    Information security allows those who have a varied disciple to show off their various skills. Things leadership and a strong understanding of ethical code can allow you to 
+                    accel in this field. The compensation is good and due to growth of AI there is a larger concern of the security of data making this job more in demand for the future. Working remotely
+                    is possible, but due to the nature of data some companies might only allow office access as well as highly guarded tokens and other security clearances. 
+                    <br/>
+                    From what you've told me, however, I think this job would pair well with your preferences!
+                </li>
+                <li value="5">
+                    <b>I think you should be a Network Engineer!</b>
+                    <br/> 
+                    Networking can be a much simpler job than other computer science related fields. That, however, doesn't mean there aren't challenges or that the career will not be rewarding!
+                    Networking has the benefits of being able to be done remotely. A lot of network engineering can be done with virtual machines and accessing remote desktops to manipulate various devices.
+                    Some intrusion protection systems might be physical and sometimes equipment might need configuration, but there are several opportunities for flexible work. The field also does not require
+                    a lot of mathematical prowess which is a boon for those who dislike math or just don't want it a large focus. Having a flexible job that might be a little simpler while still having solid
+                    pay is very desirable in today’s climate.
+                    <br/>
+                    From what you've told me, I think this job would pair well with your preferences!
+                </li>
+            </condition>
         </template>
     </category>
 </aiml>
