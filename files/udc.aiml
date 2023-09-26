@@ -36,6 +36,18 @@
     </category>
     <topic name="favorite course">
         <category>
+            <pattern>HELLO ^</pattern>
+            <template>
+                I'm glad you're excited to greet me again! However, I still need an answer please.
+                <br/>
+                <b>What is your <set name="topic">favorite course</set> from your college journey?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>HI ^</pattern>
+            <template><srai>HELLO *</srai></template>
+        </category>
+        <category>
             <pattern>^ <set>mathclasses</set> ^</pattern>
             <template>
                 <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
@@ -122,6 +134,18 @@
         </category>
     </topic>
     <topic name="least favorite">
+        <category>
+            <pattern>HELLO ^</pattern>
+            <template>
+                I'm glad you're excited to greet me again! However, I still need an answer please.
+                <br/>
+                <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>HI ^</pattern>
+            <template><srai>HELLO *</srai></template>
+        </category>
         <category>
             <pattern>^ <set>mathclasses</set> ^</pattern>
             <template>
@@ -260,9 +284,9 @@
             <template>
                <condition name="favoriteindex">
                     <li value="2">
-                        You just told me <get name="favoritecourse"/> was your favorite! I think you might like networking a bit more than you lead on.
+                        You just told me <get name="favoritecourse"/> was your favorite! I think you might like programming a bit more than you lead on.
                         <br/> 
-                        <b>So, what's another class that isn't networking related that you find to be your least favorite?</b>
+                        <b>So, what's another class that isn't programming related that you find to be your least favorite?</b>
                     </li>
                     <li>
                         <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
@@ -317,6 +341,18 @@
     </topic>
     <topic name="math">
         <category>
+            <pattern>HELLO ^</pattern>
+            <template>
+                I'm glad you're excited to greet me again! However, I still need an answer please.
+                <br/>
+                <b>Do you enjoy math?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>HI ^</pattern>
+            <template><srai>HELLO *</srai></template>
+        </category>
+        <category>
             <pattern>^ <set>negativeresponses</set> ^</pattern>
             <template>
                 <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
@@ -351,6 +387,18 @@
         </category>
     </topic>
     <topic name="job">
+        <category>
+            <pattern>HELLO ^</pattern>
+            <template>
+                I'm glad you're excited to greet me again! However, I still need an answer please.
+                <br/>
+                <b>What do you want from an ideal <set name="topic">job</set>?</b>
+            </template>
+        </category>
+        <category>
+            <pattern>HI ^</pattern>
+            <template><srai>HELLO *</srai></template>
+        </category>
         <category>
             <pattern>^ <set>easerelated</set> ^</pattern>
             <template>
@@ -654,7 +702,8 @@
                     machine learning. Being a part of a rapidly changing industry can be exciting and you have the potential to be at the forefront of a 
                     new and luractive adventure. 
                     <br/>
-                    From what you've told me. I think this job would pair well with your preferences!
+                    From what you've told me. I think this job would pair well with your preferences! So, I think that's it!
+                    <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="2">
                     <b>I think you should be a Software Developer!</b>
@@ -664,7 +713,8 @@
                     is still generous and while it might not be as future proof as fields that do use machine learning, it is still very stable. Working remotely
                     is simple for this kind of job and there are several positions for work from home employees in software development.
                     <br/>
-                    So, from what you've told me, I think this job would pair well with your preferences!
+                    So, from what you've told me, I think this job would pair well with your preferences! So, I think that's it!
+                    <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="3">
                     <b>I think you should be a Game Developer!</b>
@@ -674,7 +724,8 @@
                     will become more competitive as you gain experience. The freedom of being able to potentially work with music, user interfaces, and possibly have cool
                     social interactions with end users make this career fulfilling. However, some of these companies prefer in office work due to IP concerns so be mindful of this.
                     <br/>
-                    From what you've told me, however, I think this job would pair well with your preferences!
+                    From what you've told me, however, I think this job would pair well with your preferences! So, I think that's it!
+                    <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="4">
                     <b>I think you should be an Information Security Analyst!</b>
@@ -684,7 +735,8 @@
                     accel in this field. The compensation is good and due to growth of AI there is a larger concern of the security of data making this job more in demand for the future. Working remotely
                     is possible, but due to the nature of data some companies might only allow office access as well as highly guarded tokens and other security clearances. 
                     <br/>
-                    From what you've told me, however, I think this job would pair well with your preferences!
+                    From what you've told me, however, I think this job would pair well with your preferences! So, I think that's it!
+                    <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="5">
                     <b>I think you should be a Network Engineer!</b>
@@ -695,9 +747,34 @@
                     a lot of mathematical prowess which is a boon for those who dislike math or just don't want it a large focus. Having a flexible job that might be a little simpler while still having solid
                     pay is very desirable in today’s climate.
                     <br/>
-                    From what you've told me, I think this job would pair well with your preferences!
+                    From what you've told me, I think this job would pair well with your preferences! So, I think that's it!
+                    <think><set name="topic">conclusion</set></think>
                 </li>
             </condition>
         </template>
     </category>
+    <topic name="conclusion">
+        <category>
+            <pattern>^ THANK YOU ^</pattern>
+            <template>
+                You're welcome! I'm always here to help you the best I can!
+                <br/>
+                <b>If you would like to start over just say "hello" again!</b>
+            </template>
+        </category>
+        <category>
+            <pattern>^ THANKS ^</pattern>
+            <template><srai>THANK YOU</srai></template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Hopefully I've been a help to you! I've given a recommendation based upon the best of my ability!
+                <br/>
+                If you need more assistance you can schedule time with an advisor at 1-800-434-2365
+                <br/>
+                <b>If you would like to start over just say "hello" again!</b>
+            </template>
+        </category>
+    </topic>
 </aiml>
