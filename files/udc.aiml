@@ -19,7 +19,6 @@
             <think><set name="netpoints">0</set></think>
             <think><set name="favoritecourse">none</set></think>
             <think><set name="likesmath">no</set></think>
-            <think><set name="processed">no</set></think>
             Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you!
             <br/>
             I'm going to ask you a few questions to see what job would suit your background 
@@ -315,16 +314,24 @@
     <topic name="math">
         <category>
             <pattern>^ <set>negativeresponses</set> ^</pattern>
-            <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
-            <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
-            <template>I can understand why you don't like math. It isn't for everyone and it can be cumbersome!</template>
+            <template>
+                <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+                <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
+                I can understand why you don't like math. It isn't for everyone and it can be cumbersome! With that, I have one final question for you.
+                <br/>
+                <b>What do you want from an ideal <set name="topic">job</set>?</b>
+            </template>
         </category>
         <category>
             <pattern>^ <set>positiveresponses</set> ^</pattern>
-            <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
-            <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
-            <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
-            <template>I'm glad you enjoy math! It's fantastic!</template>
+            <template>
+                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
+                I'm glad you enjoy math! It's fantastic! Well, with all that said, I have one final question for you.
+                <br/>
+                <b>What do you want from an ideal <set name="topic">job</set>?</b>
+            </template>
         </category>
     </topic>
     <topic name="job">
