@@ -132,9 +132,10 @@
                         <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                         <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
-                        The number of sec points there are is <get name="secpoints"/>
                         I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
                         <br/>
+                        <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+                        <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
                         I was going to ask you next what feelings you had about math. But, since you have a math class as your least favorite, I think I know the answer to that! 
                         <br/> 
                         <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
@@ -160,6 +161,9 @@
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
+                                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                                <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
                                 <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
@@ -193,6 +197,9 @@
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
+                                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                                <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
                                 <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
@@ -226,6 +233,9 @@
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
+                                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                                <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
                                 <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
@@ -259,6 +269,9 @@
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
+                                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                                <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
                                 <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
@@ -281,6 +294,9 @@
                 <br/>
                 <condition name="likesmath">
                     <li value="yes">
+                        <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                        <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                        <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                         I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                         <br/> 
                         <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
@@ -295,24 +311,27 @@
             </template>
         </category>
     </topic>
+    <topic name="math">
+        <category>
+            <pattern># <set>positivebeforenoun</set> ^ <set>mathrelated</set> ^</pattern>
+            <template>I'm glad you <star index="2"/> math! It's fantastic!</template>
+        </category>
+        <category>
+            <pattern># <set>mathrelated</set> ^ <set>positiveafternoun</set> ^</pattern>
+            <template>I'm glad you think math <person><star index="2"/></person> <star index="3"/>! It is really great!</template>
+        </category>
+        <category>
+            <pattern>^ I * ^ <set>mathrelated</set> ^</pattern>
+            <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
+        </category>
+    </topic>
     <topic name="hobbies">
     </topic>
     <category>
         <pattern>HI ^</pattern>
         <template><srai>HELLO *</srai></template>
     </category>
-    <category>
-        <pattern># <set>positivebeforenoun</set> ^ MATH ^</pattern>
-        <template>I'm glad you <star index="2"/> math! It's fantastic!</template>
-    </category>
-    <category>
-        <pattern># MATH ^ <set>positiveafternoun</set> ^</pattern>
-        <template>I'm glad you think math <person><star index="2"/></person> <star index="3"/>! It is really great!</template>
-    </category>
-    <category>
-        <pattern>^ I * ^ MATH ^</pattern>
-        <template>I'm sorry to hear you <star index="2"/> math! It's fantastic!</template>
-    </category>
+    
     <category>
         <pattern>CBPOINTTOTALS</pattern>
         <template>
