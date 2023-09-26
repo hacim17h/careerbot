@@ -41,6 +41,7 @@
                 I see you like math! <star index="2"/> in particular can be really useful for a number of jobs.
                 <br/>
                 <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
+                <srai><star index="1"/> <star index="2"/> <star index="3"/></srai>
             </template>
         </category>
         <category>
@@ -138,7 +139,7 @@
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
                         I was going to ask you next what feelings you had about math. But, since you have a math class as your least favorite, I think I know the answer to that! 
                         <br/> 
-                        <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
+                        <b>Instead, I'll ask one last question. What do you want from an ideal <set name="topic">job</set>?</b>
                     </li>
                 </condition>
             </template>
@@ -166,7 +167,7 @@
                                 <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
-                                <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
+                                <b>Instead, I'll ask one last question. What do you want from an ideal <set name="topic">job</set>?</b>
                             </li>
                             <li value="unknown">
                                 Next up, I wanted to ask you how much you like <set name="topic">math</set>. Thought it is very prominent in computer science,
@@ -202,7 +203,7 @@
                                 <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
-                                <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
+                                <b>Instead, I'll ask one last question. What do you want from an ideal <set name="topic">job</set>?</b>
                             </li>
                             <li value="unknown">
                                 Next up, I wanted to ask you how much you like <set name="topic">math</set>. Thought it is very prominent in computer science,
@@ -238,7 +239,7 @@
                                 <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
-                                <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
+                                <b>Instead, I'll ask one last question. What do you want from an ideal <set name="topic">job</set>?</b>
                             </li>
                             <li value="unknown">
                                 Next up, I wanted to ask you how much you like <set name="topic">math</set>. Thought it is very prominent in computer science,
@@ -274,7 +275,7 @@
                                 <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                                 I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                                 <br/> 
-                                <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
+                                <b>Instead, I'll ask one last question. What do you want from an ideal <set name="topic">job</set>?</b>
                             </li>
                             <li value="unknown">
                                 Next up, I wanted to ask you how much you like <set name="topic">math</set>. Thought it is very prominent in computer science,
@@ -299,7 +300,7 @@
                         <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                         I was going to ask you next what feelings you had about math. But, since you like <get name="favoritecourse"/>, I think I know the answer to that! 
                         <br/> 
-                        <b>Instead, what are some <set name="topic">hobbies</set> you have?</b>
+                        <b>Instead, I'll ask one last question. What do you want from an ideal <set name="topic">job</set>?</b>
                     </li>
                     <li value="unknown">
                         Next up, I wanted to ask you how much you like <set name="topic">math</set>. Thought it is very prominent in computer science,
@@ -314,14 +315,19 @@
     <topic name="math">
         <category>
             <pattern>^ <set>negativeresponses</set> ^</pattern>
+            <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+            <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
             <template>I can understand why you don't like math. It isn't for everyone and it can be cumbersome!</template>
         </category>
         <category>
             <pattern>^ <set>positiveresponses</set> ^</pattern>
+            <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+            <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+            <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
             <template>I'm glad you enjoy math! It's fantastic!</template>
         </category>
     </topic>
-    <topic name="hobbies">
+    <topic name="job">
     </topic>
     <category>
         <pattern>HI ^</pattern>
