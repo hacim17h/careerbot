@@ -695,6 +695,7 @@
             <br/>
             <condition name="leadingcareer">
                 <li value="1">
+                    <split/>
                     <b>I think you should be an AI Engineer!</b>
                     <br/> 
                     Artificial intelligence can be challenging. It deals with a lot of math and at times uses complex algorithms. However,
@@ -706,6 +707,7 @@
                     <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="2">
+                    <split/>
                     <b>I think you should be a Software Developer!</b>
                     <br/> 
                     Software development is something common to a lot of Computer Science graduates. It requires a bit of math, but there are several 
@@ -717,6 +719,7 @@
                     <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="3">
+                    <split/>
                     <b>I think you should be a Game Developer!</b>
                     <br/> 
                     Game development is a rewarding career that covers a lot of disciplines. If you have a broader set of skills, there is a huge variety of 
@@ -728,6 +731,7 @@
                     <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="4">
+                    <split/>
                     <b>I think you should be an Information Security Analyst!</b>
                     <br/> 
                     An Information Security Analyst is a very sensitive but rewarding career. You deal with data hiding, cryptology, and the ethics that govern the information you're protecting.
@@ -739,6 +743,7 @@
                     <think><set name="topic">conclusion</set></think>
                 </li>
                 <li value="5">
+                    <split/>
                     <b>I think you should be a Network Engineer!</b>
                     <br/> 
                     Networking can be a much simpler job than other computer science related fields. That, however, doesn't mean there aren't challenges or that the career will not be rewarding!
