@@ -30,6 +30,10 @@
             <b>What is your <set name="topic">favorite course</set> from your college journey?</b>
         </template>
     </category>
+    <category>
+        <pattern>HI ^</pattern>
+        <template><srai>HELLO *</srai></template>
+    </category>
     <topic name="favorite course">
         <category>
             <pattern>^ <set>mathclasses</set> ^</pattern>
@@ -132,7 +136,7 @@
                         <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                         <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
-                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you got through it though!
                         <br/>
                         <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
@@ -157,7 +161,7 @@
                         <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                         <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
                         <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
-                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you got through it though!
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
@@ -193,7 +197,7 @@
                         <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                         <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
-                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you got through it though!
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
@@ -229,7 +233,7 @@
                         <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
                         <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
-                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you got through it though!
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
@@ -265,7 +269,7 @@
                         <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                         <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
                         <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
-                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you go through it though!
+                        I can understand that! Classes like <star index="2"/> can be offputting for a number of reasons. I'm glad you got through it though!
                         <br/>
                         <condition name="likesmath">
                             <li value="yes">
@@ -317,6 +321,7 @@
             <template>
                 <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
                 <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
+                <think><set name="likesmath">no</set></think>
                 I can understand why you don't like math. It isn't for everyone and it can be cumbersome! With that, I have one final question for you.
                 <br/>
                 <b>What do you want from an ideal <set name="topic">job</set>?</b>
@@ -328,28 +333,86 @@
                 <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
                 <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
                 <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
+                <think><set name="likesmath">yes</set></think>
                 I'm glad you enjoy math! It's fantastic! Well, with all that said, I have one final question for you.
+                <br/>
+                <b>What do you want from an ideal <set name="topic">job</set>?</b>
+            </template>
+        </category>
+         <category>
+            <pattern>*</pattern>
+            <template>
+                <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+                I don't quite understand what you mean but based upon the other questions I have a good idea on how to move forward! 
+                With all that said, I have one final question for you.
                 <br/>
                 <b>What do you want from an ideal <set name="topic">job</set>?</b>
             </template>
         </category>
     </topic>
     <topic name="job">
+        <category>
+            <pattern>^ <set>easerelated</set> ^</pattern>
+            <template>
+                <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+                <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
+                I understand. Having an easier job being a priority can allow for a more relaxed lifestyle. 
+                <br/>
+                I think I have enough information now! Let's go over what I think would be a good career choice for you.
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>payrelated</set> ^</pattern>
+            <template>
+                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
+                I understand. Being compensated well means a lot especially if you have dependents, a large family, or just want a more robust lifestyle. 
+                <br/>
+                I think I have enough information now! Let's go over what I think would be a good career choice for you.
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>futurerelated</set> ^</pattern>
+            <template>
+                <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
+                <think><set name="secpoints"><map><name>successor</name><get name="secpoints"/></map></set></think>
+                I understand. With the job market moving at a rapid pace, it is important to join careers that have the highest prospects for the future. 
+                <br/>
+                I think I have enough information now! Let's go over what I think would be a good career choice for you.
+            </template>
+        </category>
+        <category>
+            <pattern>^ <set>remoterelated</set> ^</pattern>
+            <template>
+                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                <think><set name="mathpoints"><map><name>successor</name><get name="mathpoints"/></map></set></think>
+                <think><set name="netpoints"><map><name>successor</name><get name="netpoints"/></map></set></think>
+                I understand. Having the ability to work from home can be a really empowering experience. It can allow flexibility and save money on travel. 
+                <br/>
+                I think I have enough information now! Let's go over what I think would be a good career choice for you.
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                <think><set name="codepoints"><map><name>successor</name><get name="codepoints"/></map></set></think>
+                <think><set name="interactpoints"><map><name>successor</name><get name="interactpoints"/></map></set></think>
+                That sounds interesting! I'm not familiar with all of those aspects but from what I can gather I think I know what you mean.
+                <br/>
+                Okay! I have enough information now! Let's go over what I think would be a good career choice for you.
+            </template>
+        </category>
     </topic>
-    <category>
-        <pattern>HI ^</pattern>
-        <template><srai>HELLO *</srai></template>
-    </category>
-    
     <category>
         <pattern>CBPOINTTOTALS</pattern>
         <template>
             <think>
-                <set name="mathpoints">3</set>
-                <set name="codepoints">4</set>
-                <set name="interactpoints">4</set>
-                <set name="secpoints">3</set>
-                <set name="netpoints">4</set>
+                <set name="mathpoints"><get name="mathpoints"/></set>
+                <set name="codepoints"><get name="codepoints"/></set>
+                <set name="interactpoints"><get name="interactpoints"/></set>
+                <set name="secpoints"><get name="secpoints"/></set>
+                <set name="netpoints"><get name="netpoints"/></set>
                 <set name="start">1</set>
                 <set name="numcategories">6</set>
                 <set name="highscore"><get name="mathpoints"/></set>
