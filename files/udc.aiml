@@ -19,6 +19,7 @@
             <think><set name="netpoints">0</set></think>
             <think><set name="favoritecourse">none</set></think>
             <think><set name="likesmath">no</set></think>
+            <think><set name="processed">no</set></think>
             Hello! My name is Careerbot and I'm here to help you find what computer science job is right for you!
             <br/>
             I'm going to ask you a few questions to see what job would suit your background 
@@ -41,7 +42,6 @@
                 I see you like math! <star index="2"/> in particular can be really useful for a number of jobs.
                 <br/>
                 <b>What class did you find to be your <set name="topic">least favorite</set> while you were taking it?</b>
-                <srai><star index="1"/> <star index="2"/> <star index="3"/></srai>
             </template>
         </category>
         <category>
